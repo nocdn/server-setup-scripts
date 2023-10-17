@@ -9,6 +9,9 @@ response = requests.get(url)
 response_data = response.json()['data']
 
 for item in response_data:
-    print(f"{item['name']} - {item['author']['name']}")
-    print(f"{item['websiteRecentFiles'][1]['files'][0]['fileName']}")
-    print("\n\n")
+    if item['websiteRecentFiles'][1]:
+        print(f"{item['name']} - {item['author']['name']}")
+        print(f"{item['websiteRecentFiles'][1]['files'][0]['fileName']}")
+        print("\n\n")
+    else:
+        continue
