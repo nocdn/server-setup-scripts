@@ -36,3 +36,6 @@ curl -o "${HOME_DIR}/backup.sh" https://raw.githubusercontent.com/Kayetic/Server
 curl -o "${HOME_DIR}/restore.sh" https://raw.githubusercontent.com/Kayetic/Server-Setup-Scripts/main/restore.sh
 chmod +x "${HOME_DIR}/backup.sh"
 chmod +x "${HOME_DIR}/restore.sh"
+
+echo "Java version:"
+java --version
