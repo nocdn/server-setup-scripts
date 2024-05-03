@@ -3,8 +3,10 @@
 To download, run the following command:
 
 ```bash
-curl -O "https://raw.githubusercontent.com/Kayetic/Server-Setup-Scripts/main/general.sh" && chmod +x general.sh
+curl -O "https://raw.githubusercontent.com/Kayetic/Server-Setup-Scripts/main/general.sh" && chmod +x general.sh && ./general.sh && rm general.sh
 ```
+
+(This will download the script, make it executable, run it, and then delete it when it finishes.)
 
 To run the script, log in as root and run the following command:
 

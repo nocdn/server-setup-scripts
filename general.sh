@@ -25,10 +25,8 @@ apt install temurin-17-jre -y
 # configure aws cli:
 aws configure
 
-# exit root shell:
-exit
-
 # download the backup and restore scripts:
-
-curl -O https://raw.githubusercontent.com/Kayetic/Server-Setup-Scripts/main/backup.sh
-curl -O https://raw.githubusercontent.com/Kayetic/Server-Setup-Scripts/main/download-backup.sh
+curl -O ~/backup.sh https://raw.githubusercontent.com/Kayetic/Server-Setup-Scripts/main/backup.sh
+curl -O ~/download-backup.sh https://raw.githubusercontent.com/Kayetic/Server-Setup-Scripts/main/restore.sh
+chmod +x ~/backup.sh
+chmod +x ~/download-backup.sh
