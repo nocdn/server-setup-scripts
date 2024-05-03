@@ -27,7 +27,12 @@ apt install temurin-17-jre -y
 aws configure
 
 # download the backup and restore scripts:
-curl -O ~/backup.sh https://raw.githubusercontent.com/Kayetic/Server-Setup-Scripts/main/backup.sh
-curl -O ~/download-backup.sh https://raw.githubusercontent.com/Kayetic/Server-Setup-Scripts/main/restore.sh
-chmod +x ~/backup.sh
-chmod +x ~/download-backup.sh
+
+# getting the user's home directory to save into:
+HOME_DIR=${SUDO_USER:-$USER}
+HOME_DIR=$(getent passwd $HOME_DIR | cut -d: -f6)
+
+curl -o "${HOME_DIR}/backup.sh" https://raw.githubusercontent.com/Kayetic/Server-Setup-Scripts/main/backup.sh
+curl -o "${HOME_DIR}/restore.sh" https://raw.githubusercontent.com/Kayetic/Server-Setup-Scripts/main/restore.sh
+chmod +x "${HOME_DIR}/backup.sh"
+chmod +x "${HOME_DIR}/restore.sh"
