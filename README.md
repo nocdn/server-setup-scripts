@@ -9,5 +9,5 @@ curl -O "https://raw.githubusercontent.com/Kayetic/Server-Setup-Scripts/main/gen
 To run the script, log in as root and run the following command:
 
 ```bash
-bash ./setup.sh
+./setup.sh
 ```
