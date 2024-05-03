@@ -30,4 +30,5 @@ exit
 
 # download the backup and restore scripts:
 
-curl -O 
+curl -O https://raw.githubusercontent.com/Kayetic/Server-Setup-Scripts/main/backup.sh
+curl -O https://raw.githubusercontent.com/Kayetic/Server-Setup-Scripts/main/download-backup.sh
