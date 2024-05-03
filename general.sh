@@ -5,8 +5,8 @@ if [ "$(id -u)" != "0" ]; then
 fi
 
 # update sudo:
-apt-get update
-apt-get upgrade
+apt-get update -y
+apt-get upgrade -y
 
 # install packages:
 apt-get install -y curl
@@ -20,7 +20,7 @@ wget -qO - https://packages.adoptium.net/artifactory/api/gpg/key/public | gpg --
 echo "deb https://packages.adoptium.net/artifactory/deb $(awk -F= '/^VERSION_CODENAME/{print$2}' /etc/os-release) main" | tee /etc/apt/sources.list.d/adoptium.list
 
 apt update
-apt install temurin-17-jre
+apt install temurin-17-jre -y
 
 # configure aws cli:
 aws configure
