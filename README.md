@@ -7,9 +7,3 @@ curl -O "https://raw.githubusercontent.com/Kayetic/Server-Setup-Scripts/main/gen
 ```
 
 (This will download the script, make it executable, run it, and then delete it when it finishes.)
-
-To run the script, log in as root and run the following command:
-
-```bash
-./setup.sh
-```
