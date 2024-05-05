@@ -11,6 +11,7 @@ apt-get upgrade -y
 
 # install packages:
 apt-get install -y curl
+apt-get install -y neofetch
 apt-get install -y unzip
 apt-get install -y zip
 apt install -y awscli
