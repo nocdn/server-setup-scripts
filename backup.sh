@@ -1,29 +1,22 @@
 #!/bin/bash
 
-# Get current date and time in DD-MM-YYYY-HH-MM-SS format
-current_datetime=$(date +%d-%m-%Y-%H-%M-%S)
+# Define the source directory and S3 bucket path
+source_directory="/home/nk3h8wbq/server-files/simplebackups/"
+s3_bucket="s3://modded-server-backups/"
 
-# Define the directory to zip
-directory_to_zip="server-files/"
-
-# Create the filename with the current date and time
-zip_filename="server-files-${current_datetime}.zip"
-
-# Running the zip command with the generated filename
-zip -r "${zip_filename}" "${directory_to_zip}"
-
-echo "Files have been zipped into ${zip_filename}"
-
-# Upload the zip file to the S3 bucket
-aws s3 cp "${zip_filename}" "s3://modded-server-backups/${zip_filename}" --storage-class GLACIER_IR
+# Upload all files from the source directory to the S3 bucket
+aws s3 cp "${source_directory}" "${s3_bucket}" --recursive
 
 if [ $? -eq 0 ]; then
-    echo "Successfully uploaded ${zip_filename} to S3 bucket 'modded-server-backups'."
+    echo "Successfully uploaded all files from ${source_directory} to S3 bucket 'modded-server-backups'."
+
+    # Remove all files from the source directory after successful upload
+    rm -rf "${source_directory}"*
+    if [ $? -eq 0 ]; then
+        echo "Successfully deleted all files from ${source_directory}."
+    else
+        echo "Failed to delete files from ${source_directory}."
+    fi
 else
-    echo "Failed to upload ${zip_filename} to S3 bucket 'modded-server-backups'."
+    echo "Failed to upload files from ${source_directory} to S3 bucket 'modded-server-backups'."
 fi
-
-sleep 2
-
-# Remove the zip file after upload
-rm "$zip_filename"

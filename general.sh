@@ -34,8 +34,10 @@ HOME_DIR=${SUDO_USER:-$USER}
 HOME_DIR=$(getent passwd $HOME_DIR | cut -d: -f6)
 
 curl -o "${HOME_DIR}/backup.sh" https://raw.githubusercontent.com/Kayetic/Server-Setup-Scripts/main/backup.sh
+curl -o "${HOME_DIR}/secondaryBackup.sh" https://raw.githubusercontent.com/Kayetic/Server-Setup-Scripts/main/secondaryBackup.sh
 curl -o "${HOME_DIR}/restore.sh" https://raw.githubusercontent.com/Kayetic/Server-Setup-Scripts/main/restore.sh
 chmod +x "${HOME_DIR}/backup.sh"
+chmod +x "${HOME_DIR}/secondaryBackup.sh"
 chmod +x "${HOME_DIR}/restore.sh"
 
 echo "Java version:"
