@@ -1,5 +1,6 @@
-# check if the script is running as root:
+#!/bin/bash
 
+# check if the script is running as root:
 if [ "$(id -u)" != "0" ]; then
     echo "This script must be run as root" 1>&2
     exit 1
@@ -30,8 +31,8 @@ aws configure
 # download the backup and restore scripts:
 
 # getting the user's home directory to save into:
-HOME_DIR=${SUDO_USER:-$USER}
-HOME_DIR=$(getent passwd $HOME_DIR | cut -d: -f6)
+HOME_DIR=$(eval echo ~${SUDO_USER})
+USER_NAME=${SUDO_USER:-$USER}
 
 curl -o "${HOME_DIR}/backup.sh" https://raw.githubusercontent.com/Kayetic/Server-Setup-Scripts/main/backup.sh
 curl -o "${HOME_DIR}/secondaryBackup.sh" https://raw.githubusercontent.com/Kayetic/Server-Setup-Scripts/main/secondaryBackup.sh
@@ -39,6 +40,11 @@ curl -o "${HOME_DIR}/restore.sh" https://raw.githubusercontent.com/Kayetic/Serve
 chmod +x "${HOME_DIR}/backup.sh"
 chmod +x "${HOME_DIR}/secondaryBackup.sh"
 chmod +x "${HOME_DIR}/restore.sh"
+
+# change ownership of the downloaded scripts to the user
+chown ${USER_NAME}:${USER_NAME} "${HOME_DIR}/backup.sh"
+chown ${USER_NAME}:${USER_NAME} "${HOME_DIR}/secondaryBackup.sh"
+chown ${USER_NAME}:${USER_NAME} "${HOME_DIR}/restore.sh"
 
 echo "Java version:"
 java --version
