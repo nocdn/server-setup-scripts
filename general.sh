@@ -15,6 +15,7 @@ apt-get install -y curl
 apt-get install -y neofetch
 apt-get install -y unzip
 apt-get install -y zip
+apt-get install -y jq
 apt install -y awscli
 
 # installing adoptium 17 jre:
