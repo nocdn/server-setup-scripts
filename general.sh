@@ -37,14 +37,17 @@ USER_NAME=${SUDO_USER:-$USER}
 curl -o "${HOME_DIR}/backup.sh" https://raw.githubusercontent.com/Kayetic/Server-Setup-Scripts/main/backup.sh
 curl -o "${HOME_DIR}/secondaryBackup.sh" https://raw.githubusercontent.com/Kayetic/Server-Setup-Scripts/main/secondaryBackup.sh
 curl -o "${HOME_DIR}/restore.sh" https://raw.githubusercontent.com/Kayetic/Server-Setup-Scripts/main/restore.sh
+curl -o "${HOME_DIR}/modpack.sh" https://raw.githubusercontent.com/Kayetic/Server-Setup-Scripts/main/modpack.sh
 chmod +x "${HOME_DIR}/backup.sh"
 chmod +x "${HOME_DIR}/secondaryBackup.sh"
 chmod +x "${HOME_DIR}/restore.sh"
+chmod +x "${HOME_DIR}/modpack.sh"
 
 # change ownership of the downloaded scripts to the user
 chown ${USER_NAME}:${USER_NAME} "${HOME_DIR}/backup.sh"
 chown ${USER_NAME}:${USER_NAME} "${HOME_DIR}/secondaryBackup.sh"
 chown ${USER_NAME}:${USER_NAME} "${HOME_DIR}/restore.sh"
+chown ${USER_NAME}:${USER_NAME} "${HOME_DIR}/modpack.sh"
 
 echo "Java version:"
 java --version
