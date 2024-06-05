@@ -15,6 +15,10 @@ export PATH=$PATH:/root/.local/bin
 curl -sSfL https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | sh
 echo "eval \"\$(zoxide init bash)\"" >> ~/.bashrc
 
+export PATH=$PATH:/root/.local/bin
+
+source ~/.bashrc
+
 # Add aliases to the end of the user's .bashrc file
 echo "" >> ~/.bashrc
 echo "# Custom aliases" >> ~/.bashrc
