@@ -66,6 +66,6 @@ shopt -s histappend     # equivalent to appendhistory
 # Ensure history is shared between terminals
 PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
 
-source ~/.bashrc
 
 apt upgrade -y
+source ~/.bashrc
