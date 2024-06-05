@@ -9,6 +9,8 @@ chmod 644 /etc/apt/keyrings/gierens.gpg /etc/apt/sources.list.d/gierens.list
 apt update
 apt install -y eza
 
+export PATH=$PATH:/root/.local/bin
+
 # install zoxide
 curl -sSfL https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | sh
 echo "eval \"\$(zoxide init bash)\"" >> ~/.bashrc
