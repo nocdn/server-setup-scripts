@@ -45,5 +45,3 @@ bindkey "^[[B" history-search-forward
 
 # Prompt customization
 PS1="%F{white}%n %F{#F38BA8}%~ %F{white}%# %F"
-
-eval "$(zoxide init --cmd cd zsh)"
