@@ -1,4 +1,4 @@
-# Server-Setup-Scripts
+# server-setup-scripts
 
 For a personal setup script, first download and setup zsh this:
 
