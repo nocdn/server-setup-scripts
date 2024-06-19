@@ -22,3 +22,9 @@ curl -O "https://raw.githubusercontent.com/Kayetic/server-setup-scripts/main/min
 ```
 
 (This will download the script, make it executable, run it, and then delete it when it finishes.)
+
+To add a wsl symlink when using WSL2, run the following command:
+
+```bash
+curl -O "https://raw.githubusercontent.com/Kayetic/server-setup-scripts/main/wsl-symlink.sh" && chmod +x wsl-symlink.sh && ./wsl-symlink.sh && rm wsl-symlink.sh
+```
