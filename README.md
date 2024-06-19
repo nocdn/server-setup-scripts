@@ -3,10 +3,7 @@
 For a personal setup script, first download and setup zsh this:
 
 ```bash
-sudo apt update
-sudo apt upgrade -y
-sudo apt install zsh
-chsh -s $(which zsh)
+sudo apt update && sudo apt upgrade -y && sudo apt -y install zsh nano && chsh -s $(which zsh)
 ```
 
 Then restart the terminal (or close SSH connection to start a new one)
