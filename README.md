@@ -12,7 +12,7 @@ Choose option 0 to create a new .zshrc file
 Then run the script below after downloading it with the command:
 
 ```bash
-curl -O "https://raw.githubusercontent.com/Kayetic/Server-Setup-Scripts/main/setup.sh" && chmod +x ./setup.sh
+curl -O "https://raw.githubusercontent.com/Kayetic/Server-Setup-Scripts/main/setup.sh" && chmod +x ./setup.sh && ./setup.sh && rm ./setup.sh
 ```
 
 To download the modpack script, run the following command:
