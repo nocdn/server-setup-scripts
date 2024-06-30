@@ -1,6 +1,13 @@
 # server-setup-scripts
 
-For a personal setup script, first download and setup zsh this:
+For a personal setup script, first make sure you know the root password, or reset it with this:
+
+```bash
+sudo passwd root
+sudo passwd bartek
+```
+
+Then setup zsh this:
 
 ```bash
 sudo apt update && sudo apt upgrade -y && sudo apt -y install zsh nano curl && chsh -s $(which zsh)
