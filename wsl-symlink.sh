@@ -1,2 +1,4 @@
-ln -s /mnt/c/Users/akbb0 ./winhome
-ln -s /mnt/c/Users/akbb0/curseforge/minecraft/Instances ./mcinstances
+read "windows_username?enter the windows username: "
+
+ln -s /mnt/c/Users/$windows_username ./winhome
+ln -s /mnt/c/Users/$windows_username/curseforge/minecraft/Instances ./mcinstances
