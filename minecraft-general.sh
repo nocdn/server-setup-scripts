@@ -42,7 +42,7 @@ curl -o "${HOME_DIR}/modpack-download.sh" https://raw.githubusercontent.com/Kaye
 chmod +x "${HOME_DIR}/backup.sh"
 chmod +x "${HOME_DIR}/secondaryBackup.sh"
 chmod +x "${HOME_DIR}/restore.sh"
-chmod +x "${HOME_DIR}/modpack.sh"
+chmod +x "${HOME_DIR}/modpack-download.sh"
 
 # change ownership of the downloaded scripts to the user
 chown ${USER_NAME}:${USER_NAME} "${HOME_DIR}/backup.sh"

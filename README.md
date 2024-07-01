@@ -25,7 +25,7 @@ curl -O "https://raw.githubusercontent.com/Kayetic/Server-Setup-Scripts/main/set
 To download the modpack script, run the following command:
 
 ```bash
-curl -O "https://raw.githubusercontent.com/Kayetic/server-setup-scripts/main/minecraft-general.sh" && chmod +x general.sh && sudo bash general.sh && rm general.sh
+curl -O "https://raw.githubusercontent.com/Kayetic/server-setup-scripts/main/minecraft-general.sh" && chmod +x minecraft-general.sh && sudo bash minecraft-general.sh && rm minecraft-general.sh
 ```
 
 (This will download the script, make it executable, run it, and then delete it when it finishes.)
