@@ -6,6 +6,10 @@ sudo apt install -y nano wget curl zip neofetch python3 pgp gawk make fzf git aw
 rm ~/.zshrc
 curl -O "https://raw.githubusercontent.com/Kayetic/server-setup-scripts/main/.zshrc"
 
+curl -O "https://raw.githubusercontent.com/Kayetic/server-setup-scripts/main/install-go.sh"
+chmod +x ./install-go.sh
+./install-go.sh
+
 git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
 
 echo 'deb http://download.opensuse.org/repositories/shells:/zsh-users:/zsh-syntax-highlighting/Raspbian_9.0/ /' | sudo tee /etc/apt/sources.list.d/shells:zsh-users:zsh-syntax-highlighting.list

@@ -4,7 +4,7 @@ For a personal setup script, first make sure you know the root password, or rese
 
 ```bash
 sudo passwd root
-passwd $(whoami)
+sudo passwd $(whoami)
 ```
 
 Then setup zsh this:
