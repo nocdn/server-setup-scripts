@@ -10,7 +10,7 @@ sudo passwd $(whoami)
 Then setup zsh this:
 
 ```bash
-sudo apt update && sudo apt upgrade -y && sudo apt -y install zsh nano curl && chsh -s $(which zsh)
+sudo apt update && sudo apt upgrade -y && sudo apt -y install zsh nano curl jq wget && chsh -s $(which zsh)
 ```
 
 Then restart the terminal (or close SSH connection to start a new one)
