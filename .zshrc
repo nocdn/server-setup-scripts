@@ -45,3 +45,8 @@ bindkey "^[[B" history-search-forward
 
 # Prompt customization
 PS1="%F{white}%n %F{#F38BA8}%~ %F{white}%# %F"
+
+#  Go-related paths
+export PATH="$PATH:/usr/local/go/bin"
+export GOPATH=$HOME/go
+export PATH="$PATH:$GOPATH/bin"
