@@ -19,7 +19,8 @@ curl -O "https://storage.googleapis.com/golang/$filename"
 echo "Extracting to /usr/local"
 sudo tar -xzf "${filename}" -C /usr/local
 
-{
+{   
+    echo ''
     echo 'export PATH="$PATH:/usr/local/go/bin"'
     echo 'export GOPATH=$HOME/go'
     echo 'export PATH="$PATH:$GOPATH/bin"'
