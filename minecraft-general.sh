@@ -19,7 +19,10 @@ fi
 # configure aws cli:
 aws configure
 
-# download the backup and restore scripts:
+# installing s5cmd
+
+echo 'Installing s5cmd'
+go install github.com/peak/s5cmd/v2@master
 
 # getting the user's home directory to save into:
 HOME_DIR=$(eval echo ~${SUDO_USER})
