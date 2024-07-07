@@ -19,8 +19,7 @@ fi
 # configure aws cli:
 aws configure
 
-# installing s5cmd
-
+# installing s5cmd [https://github.com/peak/s5cmd]
 echo 'Installing s5cmd'
 go install github.com/peak/s5cmd/v2@master
 

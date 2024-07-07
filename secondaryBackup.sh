@@ -15,7 +15,7 @@ zip -r "${zip_filename}" "${directory_to_zip}"
 echo "Files have been zipped into ${zip_filename}"
 
 # Upload the zip file to the S3 bucket
-aws s3 cp "${zip_filename}" "s3://modded-server-backups/${zip_filename}"
+s5cmd cp "${zip_filename}" "s3://modded-server-backups/${zip_filename}"
 
 if [ $? -eq 0 ]; then
     echo "Successfully uploaded ${zip_filename} to S3 bucket 'modded-server-backups'."
