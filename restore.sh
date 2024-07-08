@@ -47,6 +47,6 @@ fi
 
 # Download the selected file
 echo "Downloading $selected_file..."
-s5cmd cp s3://$bucket/$selected_file ./
+s5cmd cp --show-progress s3://$bucket/$selected_file ./
 
 echo "$selected_file has been downloaded successfully."

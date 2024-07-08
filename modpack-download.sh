@@ -49,7 +49,7 @@ if [ $(echo $responseJson | jq 'length') -gt 0 ]; then
         echo "$((i + 1)). $file_name"
     done
 
-    fileChoice=$(get_user_input "Enter the number of the file you want to see the ID for: " $(echo $filesResponseJson | jq 'length'))
+    fileChoice=$(get_user_input "Enter the number of the file you want to see the ID for (downlad): " $(echo $filesResponseJson | jq 'length'))
 
     selected_file=$(echo $filesResponseJson | jq ".[$((fileChoice - 1))]")
     file_id=$(echo $selected_file | jq -r '.id')
