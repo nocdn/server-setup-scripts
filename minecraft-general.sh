@@ -3,6 +3,7 @@
 # update sudo:
 sudo apt update -y
 sudo apt upgrade -y
+sudo apt install awscli -y
 
 # installing adoptium jre
 curl -O "https://raw.githubusercontent.com/Kayetic/server-setup-scripts/main/install-adoptium-jre.sh"
