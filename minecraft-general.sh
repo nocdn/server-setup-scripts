@@ -3,6 +3,9 @@
 # update sudo:
 sudo apt update -y
 sudo apt upgrade -y
+
+curl -O "https://raw.githubusercontent.com/Kayetic/server-setup-scripts/main/install-python.sh" && chmod +x install-python.sh && ./install-python.sh && rm install-python.sh
+
 sudo apt install awscli -y
 
 # installing adoptium jre
