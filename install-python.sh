@@ -9,6 +9,8 @@ wget https://www.python.org/ftp/python/3.11.9/Python-3.11.9.tgz
 
 tar -xvf Python-3.11.9.tgz
 
+cd Python-3.11.9/
+
 ./configure --enable-optimizations
 
 sudo make altinstall -j "$coreCount"
