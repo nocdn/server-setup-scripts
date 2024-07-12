@@ -1,7 +1,7 @@
 sudo apt update
 sudo apt upgrade -y
 
-sudo apt install -y nano wget curl zip neofetch python3 pgp gawk make fzf git awscli jq
+sudo apt install -y nano wget curl zip neofetch python3 pgp gawk make fzf git jq
 
 rm ~/.zshrc
 curl -O "https://raw.githubusercontent.com/Kayetic/server-setup-scripts/main/.zshrc"
